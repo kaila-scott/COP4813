@@ -3,90 +3,65 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Personal COP4813 Web Systems portfolio site for Kaila Scott.">
+    <meta name="keywords" content="COP4813, web systems, HTML, CSS, GitHub Pages, portfolio">
+    <meta name="author" content="Kaila Scott">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COP4813 - Hello World</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            text-align: center;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 30px;
-        }
-
-        main {
-            background-color: white;
-            max-width: 700px;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        img {
-            width: 200px;
-            margin: 20px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-
-        footer {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-        }
-    </style>
+    <title>Kaila Scott | COP4813 Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header>
-        <h1>Hello World!</h1>
-        <p>Welcome to my first website.</p>
+    <header class="site-header">
+        <div class="container">
+            <h1>Kaila Scott</h1>
+            <p>COP4813 Web Systems Portfolio</p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <h2>COP4813 Web Systems</h2>
+    <main id="main-content" class="container">
+        <section class="hero card">
+            <div>
+                <h2>Welcome</h2>
+                <p>
+                    This website was created for my COP4813 Web Systems class.
+                    I will use this site to organize my assignments and demonstrate
+                    my web programming skills throughout the semester.
+                </p>
+                <p>
+                    This site also works as a small portfolio where I can show
+                    future employers what I am learning and building.
+                </p>
+                <a class="button" href="assignments.html">View My Assignments</a>
+            </div>
 
-        <p>
-            This website was created for my COP4813 Web Systems course.
-            It is my first webpage published using GitHub Pages.
-        </p>
+            <img class="profile-image" src="capybara.gif" alt="Two capybaras relaxing in water">
+        </section>
 
-        <img
-            src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
-            alt="HTML5 Logo">
-
-        <h2>About This Site</h2>
-
-        <p>
-            I will use this site to practice HTML and web development
-            throughout the course.
-        </p>
-
-        <p>
-            <a href="about.html">Visit my About page</a>
-        </p>
-
-        <p>
-            <a href="https://github.com/" target="_blank">Visit GitHub</a>
-        </p>
-
+        <section class="card">
+            <h2>Site Purpose</h2>
+            <p>
+                The purpose of this website is to provide one organized location
+                for my COP4813 class work. As the course continues, I will update
+                the assignments page with links to current and future projects.
+            </p>
+        </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>Created by Kaila Scott</p>
     </footer>
-
 </body>
 
 </html>

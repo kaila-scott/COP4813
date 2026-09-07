@@ -3,30 +3,68 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="About Kaila Scott and her COP4813 Web Systems portfolio.">
+    <meta name="keywords" content="Kaila Scott, information technology, web development, COP4813">
+    <meta name="author" content="Kaila Scott">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - COP4813</title>
+    <title>About Me | Kaila Scott</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header>
-        <h1>About This Website</h1>
+    <header class="site-header">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Information Technology Student</p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="about.html" aria-current="page">About Me</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <p>
-            This website was created as part of my COP4813 Web Systems course.
-        </p>
+    <main id="main-content" class="container">
+        <section class="card">
+            <h2>Personal Introduction</h2>
+            <p>
+                My name is Kaila Scott, and I am studying Information Technology.
+                I am interested in web development, information security, technical
+                support, and building systems that are useful and easy for people to use.
+            </p>
+        </section>
 
-        <p>
-            <a href="index.html">Return to the Home Page</a>
-        </p>
+        <section class="card">
+            <h2>Career Goals</h2>
+            <p>
+                My goal is to continue developing my technical skills and gain more
+                experience with web programming, troubleshooting, documentation,
+                and security concepts. I want this website to show my progress as
+                I improve throughout the semester.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Skills I Am Building</h2>
+            <ul>
+                <li>HTML and CSS</li>
+                <li>GitHub and GitHub Pages</li>
+                <li>Web accessibility and validation</li>
+                <li>Technical troubleshooting</li>
+                <li>Clear documentation and communication</li>
+            </ul>
+        </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>Created by Kaila Scott</p>
     </footer>
-
 </body>
 
 </html>
