@@ -150,3 +150,106 @@ a:focus {
 .site-footer p {
     margin: 0;
 }
+.form-intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: center;
+    background: linear-gradient(135deg, #ffffff, #fff3df);
+}
+
+.form-image {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 18px;
+    border: 4px solid #6a994e;
+    display: block;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 760px;
+}
+
+fieldset {
+    border: 2px solid #6a994e;
+    border-radius: 12px;
+    margin: 22px 0;
+    padding: 20px;
+    background-color: #fffdf8;
+}
+
+legend {
+    font-weight: bold;
+    color: #2f5d3a;
+    padding: 0 8px;
+}
+
+.form-row {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 2px solid #6a994e;
+    border-radius: 8px;
+    font: inherit;
+    background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #f9c74f;
+    border-color: #2f5d3a;
+}
+
+.error {
+    display: block;
+    color: #9b1c1c;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.secondary-button {
+    background-color: #f28c28;
+    color: #1f2933;
+    margin-left: 10px;
+}
+
+.confirmation-list {
+    background-color: #fff3df;
+    border: 2px solid #6a994e;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.confirmation-list dt {
+    font-weight: bold;
+    color: #2f5d3a;
+}
+
+.confirmation-list dd {
+    margin: 0 0 12px 0;
+}
+
+@media (max-width: 700px) {
+    .form-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .secondary-button {
+        display: inline-block;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

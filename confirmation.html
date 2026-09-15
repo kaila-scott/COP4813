@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Confirmation page for Kaila Scott's COP4813 Assignment 3 form.">
+    <meta name="keywords" content="COP4813, form confirmation, HTML5, JavaScript, Kaila Scott">
+    <meta name="author" content="Kaila Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Information | Assignment 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="form.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Confirm Your Information</h1>
+            <p>Assignment 3 Form Review</p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section class="card">
+            <h2>Review Before Sending</h2>
+            <p>
+                Please review the information below. If everything is correct,
+                select Confirm and Send. If something needs to be changed,
+                return to the form.
+            </p>
+
+            <div id="confirmationDetails"></div>
+
+            <form id="mailtoForm" action="mailto:kaila_scott@daytonastate.edu" method="post" enctype="text/plain">
+                <input type="hidden" name="First_Name" id="mailFirstName">
+                <input type="hidden" name="Last_Name" id="mailLastName">
+                <input type="hidden" name="Address" id="mailAddress">
+                <input type="hidden" name="City" id="mailCity">
+                <input type="hidden" name="State" id="mailState">
+                <input type="hidden" name="ZIP_Code" id="mailZip">
+                <input type="hidden" name="Phone" id="mailPhone">
+                <input type="hidden" name="Email" id="mailEmail">
+                <input type="hidden" name="Birth_Date" id="mailBirthdate">
+                <input type="hidden" name="Message" id="mailMessage">
+
+                <button class="button" type="submit">Confirm and Send</button>
+                <a class="button secondary-button" href="form.html">Go Back and Edit</a>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Created by Kaila Scott</p>
+    </footer>
+</body>
+
+</html>
