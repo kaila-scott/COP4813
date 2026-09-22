@@ -253,3 +253,44 @@ textarea:focus {
         margin-top: 10px;
     }
 }
+.equation {
+    background-color: #fff3df;
+    border-left: 6px solid #f28c28;
+    padding: 14px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+canvas {
+    max-width: 100%;
+    background-color: #ffffff;
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, #ffffff, #fff3df);
+    border-left: 8px solid #f28c28;
+}
+
+.highlight-card strong {
+    color: #2f5d3a;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    background-color: #ffffff;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #6a994e;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #2f5d3a;
+    color: #ffffff;
+}

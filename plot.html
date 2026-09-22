@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 4 JavaScript scatter plot calculator for Kaila Scott's COP4813 course.">
+    <meta name="keywords" content="COP4813, JavaScript, Chart.js, scatter plot, plotting calculator, RC circuit">
+    <meta name="author" content="Kaila Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 | RC Circuit Scatter Plot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="plot.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Assignment 4</h1>
+            <p>JavaScript Calculator with Scatter Plotting</p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="plot.html" aria-current="page">Plot</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section class="card">
+            <h2>RC Circuit Charging Calculator</h2>
+            <p>
+                This calculator plots the voltage across a capacitor as it charges over time
+                in an RC circuit. This is an exponential equation, not a linear, quadratic,
+                or polynomial equation.
+            </p>
+
+            <p class="equation">
+                V(t) = Vs × (1 - e<sup>-t / RC</sup>)
+            </p>
+
+            <p>
+                Each point on the scatter plot shows the calculated capacitor voltage
+                at a specific time. The connected curve helps show how the capacitor
+                charges quickly at first and then slowly approaches the supply voltage.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Calculator Inputs</h2>
+
+            <form id="plotForm">
+                <div class="form-row">
+                    <label for="voltage">Supply Voltage, Vs</label>
+                    <input type="number" id="voltage" value="5" step="0.1" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="resistance">Resistance, R in ohms</label>
+                    <input type="number" id="resistance" value="1000" step="1" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="capacitance">Capacitance, C in farads</label>
+                    <input type="number" id="capacitance" value="0.001" step="0.0001" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="startTime">Start Time in seconds</label>
+                    <input type="number" id="startTime" value="0" step="0.1" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="endTime">End Time in seconds</label>
+                    <input type="number" id="endTime" value="10" step="0.1" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="timeStep">Time Step in seconds</label>
+                    <input type="number" id="timeStep" value="0.5" step="0.1" required>
+                </div>
+
+                <button class="button" type="submit">Calculate and Plot</button>
+            </form>
+
+            <p id="plotError" class="error"></p>
+        </section>
+
+        <section class="card">
+            <h2>Scatter Plot</h2>
+            <p>
+                The scatter plot uses calculated x and y values, where time is plotted
+                on the x-axis and capacitor voltage is plotted on the y-axis.
+            </p>
+            <canvas id="voltageChart" aria-label="Scatter plot showing capacitor voltage over time" role="img"></canvas>
+        </section>
+
+        <section class="card highlight-card">
+            <h2>Circuit Summary</h2>
+            <p id="circuitSummary">
+                Enter values and select Calculate and Plot to view the circuit summary.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Calculated Values</h2>
+            <div id="results"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Created by Kaila Scott</p>
+    </footer>
+</body>
+
+</html>
