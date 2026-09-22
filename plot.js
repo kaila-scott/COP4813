@@ -37,8 +37,13 @@ function calculateAndPlot() {
         return;
     }
 
-    if (startTime < 0 || endTime <= startTime || timeStep <= 0) {
-        errorMessage.textContent = "Please enter a valid time range. End time must be greater than start time.";
+        if (startTime < 0 || endTime <= startTime || timeStep <= 0) {
+        errorMessage.textContent = "Please enter a valid time range. End time must be greater than start time, and the time step must be greater than zero.";
+        return;
+    }
+
+    if (timeStep > (endTime - startTime)) {
+        errorMessage.textContent = "The time step cannot be larger than the selected time range.";
         return;
     }
 
