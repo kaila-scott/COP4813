@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 5 HTML5 Canvas Spirograph for Kaila Scott's COP4813 course.">
+    <meta name="keywords" content="COP4813, HTML5 canvas, JavaScript, Spirograph">
+    <meta name="author" content="Kaila Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 | Canvas Spirograph</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="spirograph.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Assignment 5</h1>
+            <p>HTML5 Canvas Spirograph</p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="plot.html">Plot</a></li>
+                    <li><a href="spirograph.html" aria-current="page">Spirograph</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section class="card">
+            <h2>Spirograph Canvas Drawing</h2>
+            <p>
+                This page uses the HTML5 canvas and JavaScript to draw a Spirograph pattern.
+                The program uses the required Spirograph equations:
+            </p>
+
+            <p class="equation">
+                x = (R + r) × cos(t) - (r + O) × cos(((R + r) / r) × t)
+            </p>
+
+            <p class="equation">
+                y = (R + r) × sin(t) - (r + O) × sin(((R + r) / r) × t)
+            </p>
+
+            <p>
+                The outer radius <strong>R</strong> is entered by the user. The rotating circle radius
+                <strong>r</strong> and pen offset <strong>O</strong> are randomly generated each time
+                the drawing starts.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Canvas Controls</h2>
+
+            <form id="spiroForm">
+                <div class="form-row">
+                    <label for="outerRadius">Outer Radius, R</label>
+                    <input type="number" id="outerRadius" value="110" min="50" max="180" required>
+                    <span class="hint">Enter a value from 50 to 180. The random value for r will always be less than R.</span>
+                </div>
+
+                <button class="button" type="submit">Start Spirograph</button>
+            </form>
+
+            <p id="spiroError" class="error"></p>
+
+            <div class="spiro-summary">
+                <p id="spiroValues">Random values will appear here after you start the drawing.</p>
+            </div>
+        </section>
+
+        <section class="card canvas-card">
+            <h2>Drawing Canvas</h2>
+            <canvas id="spiroCanvas" width="650" height="650" aria-label="Canvas drawing of a Spirograph pattern" role="img"></canvas>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Created by Kaila Scott</p>
+    </footer>
+</body>
+
+</html>
