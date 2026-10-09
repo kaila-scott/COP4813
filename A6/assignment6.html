@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 6 | IT Device Repair Tracker</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; }
+    body { margin: 0; background: #f2f5f9; color: #1b2b41; }
+    main { max-width: 1100px; margin: 36px auto; padding: 0 18px; }
+    header { background: #163354; color: white; padding: 26px 30px; border-radius: 12px; }
+    h1 { margin: 0 0 8px; font-size: 1.9rem; }
+    header p { margin: 0; line-height: 1.5; color: #e0eaf6; }
+    .intro { line-height: 1.6; max-width: 900px; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 22px 0; }
+    .stat { background: white; padding: 17px; border-radius: 10px; box-shadow: 0 1px 5px #15263b12; }
+    .stat strong { display: block; font-size: 1.8rem; }
+    .stat span { color: #51627a; font-size: .9rem; }
+    .panel { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 6px #15263b12; }
+    .toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .toolbar h2 { margin: 0; font-size: 1.2rem; }
+    select { font: inherit; padding: 9px 12px; border: 1px solid #a7b6c7; border-radius: 7px; background: white; }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e6ebf0; vertical-align: top; }
+    th { background: #edf2f8; white-space: nowrap; }
+    tr:hover td { background: #f7faff; }
+    .badge { display: inline-block; border-radius: 20px; padding: 5px 9px; font-size: .78rem; font-weight: bold; white-space: nowrap; }
+    .completed { background: #e2f3e9; color: #17613b; }
+    .in-progress { background: #e0eeff; color: #184c85; }
+    .pending { background: #fff1d9; color: #855300; }
+    #message { color: #9b2b27; }
+    footer { margin: 18px 0; color: #56687e; font-size: .85rem; }
+    @media (max-width: 620px) { .stats { grid-template-columns: repeat(2, 1fr); } header { padding: 20px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>IT Device Repair Tracker</h1>
+      <p>Assignment 6 – JSON | Computer diagnostics and repair records</p>
+    </header>
+    <p class="intro">This project is based on my professional experience diagnosing hardware problems, repairing computers, and tracking device progress. The sample records below are loaded from a separate <code>myjson.json</code> file using JavaScript.</p>
+    <section class="stats" aria-label="Repair summary">
+      <div class="stat"><strong id="total">0</strong><span>Total Devices</span></div>
+      <div class="stat"><strong id="completed">0</strong><span>Completed</span></div>
+      <div class="stat"><strong id="inProgress">0</strong><span>In Progress</span></div>
+      <div class="stat"><strong id="pending">0</strong><span>Pending</span></div>
+    </section>
+    <section class="panel">
+      <div class="toolbar"><h2>Repair Records</h2><label for="statusFilter">Filter by status: <select id="statusFilter"><option value="All">All</option><option value="Pending">Pending</option><option value="In Progress">In Progress</option><option value="Completed">Completed</option></select></label></div>
+      <p id="message" role="status"></p>
+      <div class="table-wrap"><table><thead><tr><th>Repair ID</th><th>Device Model</th><th>Reported Issue</th><th>Diagnosis</th><th>Repair Action</th><th>Status</th></tr></thead><tbody id="repairRows"></tbody></table></div>
+    </section>
+    <footer>All records are fictional examples. To update the displayed data, edit the external JSON file and reload the page.</footer>
+  </main>
+  <script>
+    // The data lives in myjson.json, NOT inside this HTML file.
+    let repairs = [];
+    const rows = document.getElementById('repairRows');
+    const filter = document.getElementById('statusFilter');
+    const message = document.getElementById('message');
+
+    function renderTable() {
+      rows.replaceChildren();
+      const selected = filter.value;
+      const visible = repairs.filter(item => selected === 'All' || item.status === selected);
+      for (const item of visible) {
+        const tr = document.createElement('tr');
+        for (const key of ['id', 'model', 'reportedIssue', 'diagnosis', 'repairAction']) {
+          const td = document.createElement('td');
+          td.textContent = item[key];
+          tr.appendChild(td);
+        }
+        const td = document.createElement('td');
+        const badge = document.createElement('span');
+        badge.className = 'badge ' + item.status.toLowerCase().replaceAll(' ', '-');
+        badge.textContent = item.status;
+        td.appendChild(badge);
+        tr.appendChild(td);
+        rows.appendChild(tr);
+      }
+      message.textContent = visible.length ? '' : 'No repair records match this filter.';
+    }
+
+    async function loadRepairs() {
+      try {
+        const response = await fetch('./myjson.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const data = await response.json();
+        if (!Array.isArray(data.devices)) throw new Error('Missing devices array');
+        repairs = data.devices;
+        document.getElementById('total').textContent = repairs.length;
+        document.getElementById('completed').textContent = repairs.filter(r => r.status === 'Completed').length;
+        document.getElementById('inProgress').textContent = repairs.filter(r => r.status === 'In Progress').length;
+        document.getElementById('pending').textContent = repairs.filter(r => r.status === 'Pending').length;
+        renderTable();
+      } catch (error) {
+        message.textContent = 'Could not load myjson.json. Upload both files to the same web-server folder and open the page through your website (not as a local file).';
+        console.error('JSON loading failed:', error);
+      }
+    }
+    filter.addEventListener('change', renderTable);
+    loadRepairs();
+  </script>
+</body>
+</html>

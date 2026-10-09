@@ -1,0 +1,14 @@
+{
+  "project": "IT Device Repair Tracker",
+  "description": "Fictional sample repair records inspired by real IT device diagnostics and repair workflows.",
+  "devices": [
+    {"id":"R-1001","model":"Lenovo ThinkPad T14","reportedIssue":"Computer does not boot","diagnosis":"Failed solid-state drive","repairAction":"Replace SSD and reinstall operating system","status":"Completed"},
+    {"id":"R-1002","model":"Dell Latitude 5420","reportedIssue":"Battery drains quickly","diagnosis":"Battery health degraded","repairAction":"Replace battery and verify charging","status":"In Progress"},
+    {"id":"R-1003","model":"HP EliteBook 840","reportedIssue":"No image on display","diagnosis":"Display cable connection issue","repairAction":"Reseat display cable and test panel","status":"Pending"},
+    {"id":"R-1004","model":"Lenovo ThinkCentre M720","reportedIssue":"Intermittent system crashes","diagnosis":"Faulty memory module","repairAction":"Replace RAM and run memory test","status":"Completed"},
+    {"id":"R-1005","model":"Dell OptiPlex 7090","reportedIssue":"Fan runs loudly","diagnosis":"Dust buildup and restricted airflow","repairAction":"Clean cooling system and test temperatures","status":"In Progress"},
+    {"id":"R-1006","model":"Lenovo ThinkPad L15","reportedIssue":"Keyboard keys do not respond","diagnosis":"Keyboard hardware failure","repairAction":"Replace keyboard and test all keys","status":"Pending"},
+    {"id":"R-1007","model":"HP ProDesk 600","reportedIssue":"No power","diagnosis":"Faulty power supply","repairAction":"Replace power supply and verify startup","status":"Completed"},
+    {"id":"R-1008","model":"Dell Latitude 7430","reportedIssue":"Wireless connection drops","diagnosis":"Wireless adapter malfunction","repairAction":"Replace wireless card and test connectivity","status":"Completed"}
+  ]
+}
