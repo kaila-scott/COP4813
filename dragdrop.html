@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 7 drag and drop card interface for Kaila Scott's COP4813 course.">
+    <meta name="keywords" content="COP4813, drag and drop, JavaScript, HTML5, cards">
+    <meta name="author" content="Kaila Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7 | Drag and Drop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dragdrop.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Assignment 7</h1>
+            <p>HTML5 Drag and Drop</p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="plot.html">Plot</a></li>
+                    <li><a href="spirograph.html">Spirograph</a></li>
+                    <li><a href="dragdrop.html" aria-current="page">Drag Drop</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section class="card">
+            <h2>Card Discard Game</h2>
+            <p>
+                This page demonstrates HTML5 drag and drop. Select the Deal Cards button,
+                then drag a card into the discard pile. When a card is dropped, JavaScript
+                captures the event and displays a message.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Game Controls</h2>
+            <button class="button" id="dealButton" type="button">Deal Cards</button>
+            <button class="button secondary-button" id="resetButton" type="button">Reset</button>
+            <p id="gameMessage" class="spiro-summary">
+                Click Deal Cards to begin.
+            </p>
+        </section>
+
+        <section class="card drag-layout">
+            <div>
+                <h2>Your Hand</h2>
+                <div id="cardArea" class="card-area" aria-label="Dealt cards area">
+                    <p class="placeholder-text">Cards will appear here.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2>Discard Pile</h2>
+                <div id="discardPile" class="discard-pile" aria-label="Discard pile drop target">
+                    <p>Drag cards here</p>
+                    <span class="discard-icon">🍃</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Created by Kaila Scott</p>
+    </footer>
+</body>
+
+</html>
