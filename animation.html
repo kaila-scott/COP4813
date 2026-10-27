@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive bouncing capybara animation created with HTML5 Canvas and JavaScript for COP4813 Assignment 9.">
+    <meta name="author" content="Kaila Scott">
+    <title>Assignment 9 | Capybara Garden</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="animation.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Capybara Garden 🍃</h1>
+            <p>Assignment 9 | JavaScript Canvas Animation</p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="plot.html">Plot</a></li>
+                    <li><a href="spirograph.html">Spirograph</a></li>
+                    <li><a href="dragdrop.html">Drag Drop</a></li>
+                    <li><a href="animation.html" aria-current="page">Animation</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section class="card animation-intro">
+            <h2>Welcome to the Capybara Garden!</h2>
+            <p>
+                Meet a happy little capybara exploring a leafy garden.
+                Watch it bounce around the canvas, then click directly
+                on the capybara to give it some love!
+            </p>
+            <p>
+                This animation demonstrates JavaScript movement,
+                collision detection, and mouse click events.
+            </p>
+        </section>
+
+        <section class="card animation-card">
+            <h2>Our Little Garden</h2>
+            <canvas id="gardenCanvas" width="800" height="450"
+                aria-label="Animated cartoon capybara bouncing inside a garden. Click the capybara to make hearts appear and change its direction."
+                role="img">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+
+            <p id="gardenMessage" aria-live="polite">
+                🍃 Click the capybara as it bounces around!
+            </p>
+
+            <button class="button" id="restartGarden" type="button">
+                Restart Animation
+            </button>
+        </section>
+
+        <section class="card">
+            <h2>How It Works</h2>
+            <p>
+                JavaScript moves the capybara by updating its X and Y
+                coordinates. When it reaches a canvas boundary, its
+                direction reverses. Clicking the capybara triggers an
+                event that changes its direction and creates hearts!
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Created by Kaila Scott</p>
+    </footer>
+</body>
+</html>
