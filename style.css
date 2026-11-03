@@ -577,3 +577,15 @@ canvas {
         padding: 16px;
     }
 }
+
+/* Assignment 10 - Lighthouse Audit */
+
+.audit-image {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    margin: 15px auto;
+    border: 2px solid #6a994e;
+    border-radius: 10px;
+}

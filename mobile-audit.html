@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile responsiveness and Lighthouse audit results for Kaila Scott's COP4813 website.">
+    <meta name="author" content="Kaila Scott">
+    <title>Mobile Website Audit | COP4813</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>Mobile Website Audit</h1>
+            <p>COP4813 | Mobile Responsiveness and Lighthouse</p>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="plot.html">Plot</a></li>
+                    <li><a href="spirograph.html">Spirograph</a></li>
+                    <li><a href="dragdrop.html">Drag Drop</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="mobile-audit.html" aria-current="page">Mobile Audit</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+
+        <section class="card">
+            <h2>About This Assignment</h2>
+            <p>
+                For this assignment, I updated my COP4813 homepage
+                to work better on mobile devices using responsive CSS.
+                My goal was to make the menu, images, and content
+                easier to navigate on smaller screens without removing
+                features from the desktop version.
+            </p>
+            <p>
+                I used Google Chrome Lighthouse in Mobile Navigation
+                mode to evaluate Performance, Accessibility,
+                Best Practices, and SEO.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Overall Lighthouse Results</h2>
+
+            <ul>
+                <li><strong>Performance:</strong> 85/100</li>
+                <li><strong>Accessibility:</strong> 100/100</li>
+                <li><strong>Best Practices:</strong> 100/100</li>
+                <li><strong>SEO:</strong> 100/100</li>
+            </ul>
+
+            <img class="audit-image"
+                 src="lighthouse-scores.png"
+                 alt="Lighthouse overview showing Performance 85, Accessibility 100, Best Practices 100, and SEO 100">
+        </section>
+
+        <section class="card">
+            <h2>Performance</h2>
+
+            <img class="audit-image"
+                 src="lighthouse-performance.png"
+                 alt="Lighthouse Performance audit showing a score of 85 and performance metrics">
+
+            <p>
+                My website received a Performance score of 85/100.
+                First Contentful Paint and Largest Contentful Paint were
+                both 0.9 seconds, and Cumulative Layout Shift was 0.
+                However, Total Blocking Time was 600 milliseconds.
+                Lighthouse identified opportunities to improve caching,
+                image delivery, render-blocking requests, and unused
+                JavaScript. It also reported eight long main-thread tasks.
+                Browser extensions may have negatively affected the
+                performance results during this test.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Accessibility</h2>
+
+            <img class="audit-image"
+                 src="lighthouse-accessibility.png"
+                 alt="Lighthouse Accessibility audit showing a score of 100">
+
+            <p>
+                My website received an Accessibility score of 100/100,
+                with 23 automated audits passed. This suggests that
+                the website follows the accessibility practices tested
+                by Lighthouse. Additional manual checks are still
+                recommended, including keyboard navigation, focus
+                behavior, and screen reader usability.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Best Practices</h2>
+
+            <img class="audit-image"
+                 src="lighthouse-best-practices.png"
+                 alt="Lighthouse Best Practices audit showing a score of 100">
+
+            <p>
+                My website received a Best Practices score of 100/100,
+                with 13 automated audits passed. Lighthouse did not
+                identify any scored issues in this category. Some
+                additional security and browser compatibility checks
+                were listed for manual review.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>SEO</h2>
+
+            <img class="audit-image"
+                 src="lighthouse-seo.png"
+                 alt="Lighthouse SEO audit showing a score of 100">
+
+            <p>
+                My website received an SEO score of 100/100,
+                with all eight applicable automated audits passed.
+                Lighthouse did not identify any scored SEO issues.
+                Structured data validation was listed as an
+                additional manual check.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Mobile Design Improvements</h2>
+
+            <p>
+                I used CSS media queries to adjust the website for
+                smaller screens. The navigation changes to a
+                two-column layout with larger touch-friendly buttons,
+                images resize to fit the screen, and the content
+                becomes easier to read without horizontal scrolling.
+            </p>
+
+            <p>
+                Overall, I am happy with the Lighthouse results,
+                especially the perfect scores in Accessibility,
+                Best Practices, and SEO. The Performance category
+                showed me some areas that could still be improved,
+                particularly image optimization and JavaScript loading.
+                I plan to keep these in mind as I continue working
+                on my website.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Created by Kaila Scott</p>
+    </footer>
+
+</body>
+</html>
