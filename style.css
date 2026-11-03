@@ -482,3 +482,98 @@ canvas {
 #restartGarden {
     margin: 5px auto 15px;
 }
+
+
+/* Assignment 10 - Mobile Responsive Design */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .site-header {
+        padding: 20px 10px;
+    }
+
+    .site-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .site-header p {
+        font-size: 0.95rem;
+    }
+
+    /* Mobile-friendly navigation */
+    .nav-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .nav-list li {
+        min-width: 0;
+    }
+
+    .nav-list a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 48px;
+        padding: 10px 6px;
+        font-size: 0.9rem;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    /* Single-column content */
+    .hero,
+    .form-intro,
+    .drag-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    main {
+        padding: 15px 0;
+    }
+
+    .card {
+        padding: 18px;
+        margin: 15px 0;
+    }
+
+    .card h2 {
+        font-size: 1.35rem;
+    }
+
+    /* Responsive pictures and graphics */
+    img,
+    canvas,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .profile-image {
+        max-width: 260px;
+    }
+
+    .button {
+        min-height: 44px;
+        text-align: center;
+    }
+
+    .site-footer {
+        padding: 16px;
+    }
+}
