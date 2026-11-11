@@ -1,0 +1,27 @@
+{
+  "program": "Software Development, A.S.",
+  "catalog": "Daytona State College 2026–2027",
+  "source": "https://daytonastate.smartcatalogiq.com/en/2026-2027/college-catalog/program-guides/a-s-degree/software-development-a-s-degree",
+  "disclaimer": "Class planning demonstration only. Prerequisite rules shown here are example advising logic, not verified official course prerequisites. Confirm prerequisites, offerings, and graduation requirements with the current DSC catalog and an academic advisor.",
+  "courses": [
+    {"code":"COP1000","name":"Principles of Computer Programming","credits":3,"term":"Year 1","group":"required","prerequisites":[],"note":"Introductory programming course."},
+    {"code":"CTS1851","name":"Internet Web Foundations (HTML, CSS)","credits":3,"term":"Year 1","group":"required","prerequisites":[],"note":"Foundational web technologies."},
+    {"code":"CET1600","name":"Network Plus","credits":3,"term":"Year 1","group":"required","prerequisites":[],"note":"Networking foundations."},
+    {"code":"EGS1000","name":"Professional Performance for Technicians","credits":3,"term":"Year 1","group":"required","prerequisites":[],"note":"Professional skills course."},
+    {"code":"COP2700","name":"Introduction to Database Management","credits":3,"term":"Year 1","group":"required","prerequisites":[],"note":"Introduces database concepts."},
+    {"code":"CAI1320","name":"AI Application & Prompt Engineering","credits":3,"term":"Year 1","group":"required","prerequisites":[],"note":"Applied AI and prompt engineering."},
+    {"code":"CTS2375","name":"Essentials of Cloud Computing","credits":3,"term":"Year 2","group":"required","prerequisites":[],"note":"Cloud computing foundations."},
+    {"code":"CAI2010","name":"Introduction to AI and Machine Learning with Python Programming","credits":3,"term":"Year 2","group":"required","prerequisites":[["COP1000"]],"note":"Demo AND rule: COP1000 required in this advisor model; verify official prerequisites."},
+    {"code":"COP2072","name":"Data Services","credits":3,"term":"Year 2","group":"required","prerequisites":[["COP2700"]],"note":"Demo AND rule: COP2700 required in this advisor model; verify official prerequisites."},
+    {"code":"CEN2002","name":"Software Design and Development I","credits":3,"term":"Year 2","group":"required","prerequisites":[["COP1000"],["COP2360","COP2800"]],"note":"Demo AND + OR rule: COP1000 AND either C# OR Java; verify official prerequisites."},
+    {"code":"COP2949","name":"Internship in Computer Programming","credits":3,"term":"Year 2","group":"required","prerequisites":[["COP1000"],["CTS1851"]],"note":"Program approves 3 credits for the internship; example advising gates are not official prerequisites."},
+    {"code":"COP2360","name":"C# Programming","credits":3,"term":"Year 2","group":"language","prerequisites":[["COP1000"]],"note":"Choose C# OR Java, not both, to meet this program requirement. Demo course prerequisite: COP1000."},
+    {"code":"COP2800","name":"Computer Programming Java","credits":3,"term":"Year 2","group":"language","prerequisites":[["COP1000"]],"note":"Choose Java OR C#, not both, to meet this program requirement. Demo course prerequisite: COP1000."},
+    {"code":"CIS2350","name":"Principles of Information Assurance","credits":3,"term":"Elective","group":"elective","prerequisites":[],"note":"Program elective option. Choose three electives total."},
+    {"code":"CTS2321","name":"Linux Fundamentals","credits":3,"term":"Elective","group":"elective","prerequisites":[],"note":"Program elective option. Choose three electives total."},
+    {"code":"CGS2820","name":"Web Programming (JavaScript, Ajax, ASP.Net)","credits":3,"term":"Elective","group":"elective","prerequisites":[["CTS1851"]],"note":"Demo example prerequisite: CTS1851; check actual catalog. Choose three electives total."},
+    {"code":"COP2220","name":"Computer Programming C","credits":3,"term":"Elective","group":"elective","prerequisites":[["COP1000"]],"note":"Demo example prerequisite: COP1000; check actual catalog. Choose three electives total."},
+    {"code":"CGS2100","name":"Microcomputer Applications","credits":3,"term":"Elective","group":"elective","prerequisites":[],"note":"Program elective option. Choose three electives total."},
+    {"code":"GEB2430","name":"AI, Business, Ethics, and Social Responsibility","credits":3,"term":"Elective","group":"elective","prerequisites":[],"note":"Program elective option. Choose three electives total."}
+  ]
+}

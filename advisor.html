@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Daytona State College Software Development AS course planning demonstration for COP4813 Assignment 11.">
+  <title>Assignment 11 | Course Advisor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="advisor.css">
+  <script src="advisor.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <h1>🍃 Course Garden Advisor</h1>
+      <p>Assignment 11 | Dynamic JavaScript Objects</p>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a href="form.html">Form</a></li>
+          <li><a href="plot.html">Plot</a></li>
+          <li><a href="spirograph.html">Spirograph</a></li>
+          <li><a href="dragdrop.html">Drag Drop</a></li>
+          <li><a href="animation.html">Animation</a></li>
+          <li><a href="mobile-audit.html">Mobile Audit</a></li>
+          <li><a href="advisor.html" aria-current="page">Course Advisor</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="container advisor-main">
+    <section class="advisor-hero">
+      <div>
+        <p class="eyebrow">DAYTONA STATE COLLEGE · 2026–2027</p>
+        <h2>Grow your next semester 🌱</h2>
+        <p>Mark courses you have completed, discover which courses you can take next, and add eligible courses to your plan. Drag an available course into your plan or use the Add button.</p>
+      </div>
+      <div class="capybara-decor" aria-hidden="true">🦫🍃</div>
+    </section>
+    <p class="advisor-note" id="programNote">Loading the program guide...</p>
+    <div class="advisor-stats" aria-live="polite">
+      <div><strong id="doneCount">0</strong><span>Completed</span></div>
+      <div><strong id="readyCount">0</strong><span>Available now</span></div>
+      <div><strong id="planCount">0</strong><span>In plan</span></div>
+      <div><strong id="planCredits">0</strong><span>Planned credits</span></div>
+    </div>
+    <section class="advisor-grid">
+      <div class="advisor-panel">
+        <div class="panel-heading"><h2>1. My completed classes</h2><button type="button" id="clearAll" class="advisor-outline">Reset all</button></div>
+        <p>Select courses you have already passed. Prerequisite and program-choice rules will update automatically.</p>
+        <div id="completedCourses" class="course-list"></div>
+      </div>
+      <div class="advisor-panel">
+        <div class="panel-heading"><h2>2. Courses I can take</h2><span class="mini-leaf">🍀</span></div>
+        <p>Eligible courses appear here. Click Add or drag a course to your plan.</p>
+        <div id="availableCourses" class="course-list"></div>
+        <h3>Not yet available</h3>
+        <div id="lockedCourses" class="course-list"></div>
+      </div>
+      <div class="advisor-panel plan-panel">
+        <div class="panel-heading"><h2>3. My course plan</h2><span class="mini-leaf">🍂</span></div>
+        <p>Drop eligible courses below, or use the Add buttons. You can remove any planned course.</p>
+        <div id="planDropZone" class="drop-zone" aria-label="Drop available courses here to build a plan">
+          <div id="plannedCourses" class="course-list"></div>
+          <p id="emptyPlan">Drag courses here, or select Add on an available course.</p>
+        </div>
+        <button type="button" id="copyPlan" class="advisor-primary">Copy course plan</button>
+        <p id="advisorMessage" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+    <section class="advisor-panel advisor-bottom">
+      <h2>Rules, source, and modifications</h2>
+      <p><strong>AND and OR:</strong> This demo models a prerequisite as a list of required groups. All groups must be met (AND), while any course in a group may satisfy that group (OR). For example, the demo rule for CEN2002 is COP1000 AND (COP2360 OR COP2800).</p>
+      <p><strong>Program choice:</strong> Choose one language course, COP2360 (C#) OR COP2800 (Java). Completing or planning one disables the other. Select up to three program electives.</p>
+      <p><strong>My modifications:</strong> I chose a different degree program, designed a custom JSON structure, dynamically created the course cards and buttons, added AND/OR logic, course notes, drag-and-drop planning, a credit counter, and a copy-plan feature.</p>
+      <p id="catalogSource"></p>
+      <p><strong>Important:</strong> This is a classroom demonstration, not an official advising or enrollment tool. The program course list comes from the current catalog, but the example prerequisite logic has not been verified against each course description. General education requirements are not modeled. Confirm actual eligibility and graduation requirements with DSC.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p>Created by Kaila Scott · COP4813</p></footer>
+</body>
+</html>

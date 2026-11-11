@@ -1,0 +1,49 @@
+/* Assignment 11: Course Garden Advisor */
+.advisor-main { padding-bottom: 40px; }
+.advisor-main *, .advisor-main *::before, .advisor-main *::after { box-sizing: border-box; }
+.advisor-hero { display:flex; align-items:center; justify-content:space-between; gap:20px; margin:20px 0; padding:28px; background:linear-gradient(120deg,#e9f2dc,#fff1df); border:2px solid #a4c38e; border-radius:20px; color:#24432f; }
+.advisor-hero h2 {margin:4px 0 10px; font-size:clamp(1.6rem,4vw,2.5rem); color:#315d3e;}
+.advisor-hero p {margin:6px 0; max-width:760px; line-height:1.6;}
+.eyebrow {font-size:.8rem; letter-spacing:.08em; font-weight:700;}
+.capybara-decor {font-size:4rem; flex-shrink:0;}
+.advisor-note {padding:12px 16px; background:#fff4df; border-left:5px solid #d9914a; border-radius:8px; color:#5e472e;}
+.advisor-stats {display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:20px 0;}
+.advisor-stats > div {background:#f5f8ef; border:1px solid #c8dbbc; border-radius:12px; padding:15px; text-align:center;}
+.advisor-stats strong {display:block; font-size:1.8rem; color:#34603e;}
+.advisor-stats span {display:block; color:#526a51; font-size:.9rem;}
+.advisor-grid {display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; align-items:start;}
+.advisor-panel {min-width:0; padding:20px; background:#fffdf8; border:2px solid #d5e3cb; border-radius:16px; box-shadow:0 3px 12px rgba(42,80,45,.07); color:#243b2b;}
+.advisor-panel h2 {font-size:1.15rem; color:#315d3e; margin:0;}
+.advisor-panel h3 {font-size:1rem; color:#526a51; margin:18px 0 10px;}
+.advisor-panel p {font-size:.93rem; line-height:1.55;}
+.panel-heading {display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+.course-list {display:grid; gap:10px; margin-top:14px;}
+.course-card {background:#f7f9f2; border:1px solid #c8dcc0; border-radius:10px; padding:12px; overflow-wrap:anywhere;}
+.course-card.available {border-left:5px solid #58965b; cursor:grab;}
+.course-card.locked {background:#f2f0eb; border-color:#d6d1c8; opacity:.87;}
+.course-card.planned {background:#fff4e5; border-color:#dcb384; border-left:5px solid #d58c49;}
+.course-header {display:flex; justify-content:space-between; gap:8px; align-items:start;}
+.course-code {font-size:.95rem; font-weight:800; color:#285b39;}
+.course-credits {white-space:nowrap; font-size:.8rem; color:#627b62;}
+.course-name {display:block; font-size:.9rem; margin-top:5px;}
+.course-info {font-size:.81rem !important; color:#5a6454; margin:8px 0;}
+.course-actions {display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:9px;}
+.course-actions button, .advisor-primary, .advisor-outline {border-radius:9px; border:1px solid #3d754c; font:inherit; font-size:.85rem; min-height:38px; padding:7px 12px; cursor:pointer;}
+.course-actions button, .advisor-primary {background:#3f7c50; color:white;}
+.course-actions button:hover, .advisor-primary:hover {background:#2c633d;}
+.advisor-outline {background:white; color:#356445;}
+.advisor-outline:hover {background:#e7f3e6;}
+.course-actions button:disabled {opacity:.55; cursor:not-allowed;}
+.course-check {display:flex; align-items:flex-start; gap:9px; cursor:pointer; font-size:.88rem;}
+.course-check input {margin-top:4px; width:18px; height:18px; accent-color:#3c784a; flex-shrink:0;}
+.course-check small {display:block; color:#576d58;}
+.drop-zone {border:2px dashed #8fb77d; background:#fbfdf8; min-height:160px; border-radius:12px; padding:10px; margin-top:12px;}
+.drop-zone.drag-over {background:#e5f4db; border-color:#357549;}
+#emptyPlan {text-align:center; color:#647663; padding:20px 4px;}
+#copyPlan {margin-top:15px;}
+#advisorMessage {min-height:22px; color:#376744;}
+.advisor-bottom {margin-top:18px;}
+.advisor-bottom a {overflow-wrap:anywhere;}
+.mini-leaf {font-size:1.4rem;}
+@media(max-width:1000px) {.advisor-grid {grid-template-columns:1fr 1fr;} .plan-panel {grid-column:1/-1;}}
+@media(max-width:650px) {.advisor-grid {grid-template-columns:1fr;} .plan-panel {grid-column:auto;} .advisor-stats {grid-template-columns:1fr 1fr;} .advisor-hero {padding:18px;} .capybara-decor {display:none;} .advisor-panel {padding:15px;}}
