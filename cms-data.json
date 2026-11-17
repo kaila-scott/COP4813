@@ -1,0 +1,52 @@
+[
+  {
+    "name":"Craft CMS",
+    "support":"Pixel & Tonic; commercial licensing with a free Solo edition; community and professional support.",
+    "technology":"PHP and Yii 2 on the server; MySQL/MariaDB or PostgreSQL database; Twig templates; HTML, CSS and JavaScript in the browser; GraphQL API.",
+    "capabilities":["Flexible custom content fields and structures","Twig templates and plugins","GraphQL for headless websites","Multisite and localization options"],
+    "limitations":["Paid licenses for some editions/features","Custom site builds generally need PHP/Twig development","Needs maintained server, database and security updates"],
+    "example":{"label":"% Arabica","url":"https://arabica.coffee/"},
+    "exampleEvidence":"https://craftcms.com/in-the-field",
+    "sources":[{"label":"Official overview","url":"https://docs.craftcms.com/"},{"label":"Server requirements","url":"https://craftcms.com/docs/5.x/requirements"},{"label":"Client showcase","url":"https://craftcms.com/in-the-field"}]
+  },
+  {
+    "name":"Statamic",
+    "support":"Independent commercial/open-core CMS built on Laravel; free options and paid professional licenses/support.",
+    "technology":"PHP and Laravel server; flat-file Markdown/YAML content by default (database storage optional); Antlers or Blade templates; HTML/CSS/JavaScript in browser.",
+    "capabilities":["Flat-file publishing and version-control-friendly content","Custom content fields, assets and forms","Editorial control panel and permissions","Laravel integrations and database option"],
+    "limitations":["Laravel/PHP skills helpful for customization","Some uses require a paid license","Large or complex content workflows may benefit from database configuration"],
+    "example":{"label":"Laravel website","url":"https://laravel.com/"},
+    "exampleEvidence":"https://statamic.com/showcase",
+    "sources":[{"label":"Flat-file architecture","url":"https://statamic.com/flat-file-cms"},{"label":"Database options","url":"https://statamic.dev/getting-started/installing/laravel"},{"label":"Showcase","url":"https://statamic.com/showcase"}]
+  },
+  {
+    "name":"ProcessWire",
+    "support":"Free open-source CMS and framework; community forum and optional commercial modules/support.",
+    "technology":"PHP server; MySQL or MariaDB database; PHP template files; HTML/CSS/JavaScript browser frontend.",
+    "capabilities":["Highly customizable fields, page structure and templates","Powerful content querying through PHP API","User roles and permissions","Modules and multilingual extensions"],
+    "limitations":["Developer-focused, with fewer turnkey themes than some competitors","PHP development needed for many custom designs","Database and hosting maintenance required"],
+    "example":{"label":"ProcessWire official site","url":"https://processwire.com/"},
+    "exampleEvidence":"https://processwire.com/sites/",
+    "sources":[{"label":"Requirements","url":"https://processwire.com/about/requirements/"},{"label":"Installation","url":"https://processwire.com/docs/start/install/new/"},{"label":"Site showcase","url":"https://processwire.com/sites/"}]
+  },
+  {
+    "name":"Grav CMS",
+    "support":"Free, open-source project maintained by the Grav team/Trilby Media, with community and optional paid services.",
+    "technology":"PHP with Symfony components and Twig templates; Markdown/YAML flat files instead of a database; JavaScript-enabled browser admin and frontend.",
+    "capabilities":["No database setup necessary","Themes, plugins and Markdown content","Version-control-friendly content files","REST API and administrative interface in Grav 2"],
+    "limitations":["Complex relationships and high-volume content may be less convenient in flat files","Hosting still needs PHP and regular updates","Some administration functions require added plugins or setup"],
+    "example":{"label":"Grav official site","url":"https://getgrav.org/"},
+    "exampleEvidence":"https://getgrav.org/about",
+    "sources":[{"label":"Architecture and background","url":"https://getgrav.org/about"},{"label":"Features","url":"https://getgrav.org/"},{"label":"Open-source code","url":"https://github.com/getgrav/grav"}]
+  },
+  {
+    "name":"Concrete CMS",
+    "support":"Free open-source CMS maintained by Concrete CMS/PortlandLabs; hosted plans and professional support offered.",
+    "technology":"PHP server, MySQL or MariaDB database; PHP-based content blocks/themes; HTML/CSS/JavaScript in browser.",
+    "capabilities":["Edit content directly on the page","Blocks, themes and add-ons","Fine-grained permissions and approvals","Version history and multisite capabilities"],
+    "limitations":["Requires PHP/database hosting and maintenance when self-hosted","Custom themes/add-ons need development skills","Hosted plans may limit access to code and extensions"],
+    "example":{"label":"South Dakota Department of Public Safety","url":"https://dps.sd.gov/"},
+    "exampleEvidence":"https://www.concretecms.com/about/blog/web-design/showcasing-utility-websites",
+    "sources":[{"label":"Official features","url":"https://www.concretecms.com/"},{"label":"System requirements","url":"https://documentation.concretecms.org/developers/introduction/system-requirements"},{"label":"Example case study","url":"https://www.concretecms.com/about/blog/web-design/showcasing-utility-websites"}]
+  }
+]

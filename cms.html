@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="COP4813 comparison of five lesser-known content management systems, loaded dynamically from JSON.">
+    <title>CMS Comparison | COP4813</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cms.css">
+    <script src="cms.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="container">
+            <h1>🍃 Content Management Systems</h1>
+            <p>COP4813 | CMS Research and Comparison</p>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="assignments.html">Assignments</a></li>
+                    <li><a href="form.html">Form</a></li>
+                    <li><a href="plot.html">Plot</a></li>
+                    <li><a href="spirograph.html">Spirograph</a></li>
+                    <li><a href="dragdrop.html">Drag Drop</a></li>
+                    <li><a href="animation.html">Animation</a></li>
+                    <li><a href="mobile-audit.html">Mobile Audit</a></li>
+                    <li><a href="advisor.html">Course Advisor</a></li>
+                    <li><a href="cms.html" aria-current="page">CMS Comparison</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content" class="container cms-main">
+        <section class="card cms-intro">
+            <h2>Five CMS Platforms Beyond WordPress</h2>
+            <p>For this assignment, I researched five content management systems. I compared their support, technology stacks, capabilities, limitations, and websites that use them. All table information is stored in a separate <code>cms-data.json</code> file, and JavaScript generates the rows when this page loads.</p>
+            <p>Tip: On a phone, swipe sideways within the table to see all six columns. Each CMS includes research links.</p>
+        </section>
+        <section class="card cms-results" aria-labelledby="cms-table-heading">
+            <h2 id="cms-table-heading">CMS Research Table</h2>
+            <p id="cms-status" role="status">Loading content management systems...</p>
+            <div class="cms-table-scroll" tabindex="0" role="region" aria-label="Scrollable CMS comparison table">
+                <table class="cms-table">
+                    <caption>Five content management systems compared by support, stack, features, limitations, and example</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">System</th>
+                            <th scope="col">Produced / Sold by (Support)</th>
+                            <th scope="col">Technology Base</th>
+                            <th scope="col">Major Capabilities</th>
+                            <th scope="col">Major Limitations</th>
+                            <th scope="col">Example Site</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cms-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+        <section class="card">
+            <h2>What I Learned</h2>
+            <p>What surprised me most was that not every CMS depends on a traditional database. Grav and Statamic can use flat files for content, while Craft, ProcessWire, and Concrete use databases. The best choice depends on how much customization is needed, the development team's experience, and how easy the website must be for editors to maintain.</p>
+            <p>From a cybersecurity perspective, I would also consider how each CMS handles updates, permissions, plugins, and long-term maintenance. Even a flexible CMS can create problems if it is not kept updated or properly configured.</p>
+            <p><small>Research comparison for coursework, not an endorsement. Examples are identified in vendor showcases or official documentation; a site's implementation may change.</small></p>
+        </section>
+    </main>
+    <footer class="site-footer"><p>Created by Kaila Scott | COP4813</p></footer>
+</body>
+</html>
