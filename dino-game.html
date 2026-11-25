@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fern & Fossil: an educational dinosaur and prehistoric ecosystem game prototype for COP4813.">
+  <title>Fern & Fossil | Dinosaur Game Prototype</title>
+  <link rel="stylesheet" href="dino-game.css">
+  <script src="dino-game.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#game">Skip to the game</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="back-link" href="assignments.html">← Back to Assignments</a>
+      <div class="brand"><span aria-hidden="true">🌿</span> Fern &amp; Fossil <span aria-hidden="true">🦕</span></div>
+      <p>A little prehistoric nature rescue</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="intro">
+      <div><p class="eyebrow">COP4813 · Game Prototype</p>
+      <h1>Help Pip save the fern forest!</h1>
+      <p>Catch ferns, avoid rocks, answer nature questions, and uncover dinosaur fossils to fill your very own field journal.</p></div>
+      <aside class="how-to"><strong>How to play</strong><p>Move with <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd>. On a phone, use the buttons below. Catch <strong>ferns</strong> and avoid <strong>rocks</strong>. After every three ferns, answer a nature question. Correct answers earn knowledge points. Every correct answer also uncovers a dinosaur fossil for your journal! The clock pauses while you answer or read your journal. Your discoveries are saved in this browser.</p></aside>
+    </section>
+    <section class="game-panel" id="game" aria-label="Fern and Fossil game">
+      <div class="hud" aria-live="polite" aria-atomic="true">
+        <div><span class="hud-label">Ferns saved</span><strong id="score">0</strong></div>
+        <div><span class="hud-label">Forest stage</span><strong id="level">1</strong></div>
+        <div><span class="hud-label">Knowledge points</span><strong id="knowledge">0</strong></div>
+        <div><span class="hud-label">Hearts</span><strong id="lives">♥ ♥ ♥</strong></div>
+        <div><span class="hud-label">Time</span><strong id="time">45s</strong></div>
+      </div>
+      <div class="canvas-shell">
+        <canvas id="dinoCanvas" width="900" height="500" aria-label="Cartoon dinosaur Pip catches falling ferns and dodges rocks in a prehistoric forest. Use the left and right controls to move.">Your browser does not support Canvas.</canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-card">
+            <span class="big-dino" aria-hidden="true">🦕</span>
+            <h2 id="overlayTitle">Ready, forest friend?</h2>
+            <p id="overlayText">Help Pip gather ferns and keep the forest growing!</p>
+            <button id="startButton" class="primary-button" type="button">Start Adventure</button>
+          </div>
+        </div>
+        <div class="overlay" id="quizOverlay" hidden>
+          <div class="overlay-card quiz-card" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+            <p class="eyebrow">Dino Discovery!</p>
+            <h2 id="quizTitle">Prehistoric nature question</h2>
+            <p id="quizQuestion"></p>
+            <div id="quizOptions" class="quiz-options"></div>
+            <p id="quizFeedback" role="status" aria-live="polite"></p>
+            <button id="quizContinue" class="primary-button" type="button" hidden>Continue Adventure</button>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="move-controls" aria-label="Movement controls">
+          <button id="leftButton" class="move-button" type="button" aria-label="Move dinosaur left">◀ Left</button>
+          <button id="rightButton" class="move-button" type="button" aria-label="Move dinosaur right">Right ▶</button>
+        </div>
+        <div class="action-controls">
+          <button id="journalButton" class="journal-button" type="button">📖 Fossil Journal</button>
+          <button id="pauseButton" class="secondary-button" type="button" disabled>Pause</button>
+          <button id="restartButton" class="secondary-button" type="button">Restart</button>
+        </div>
+      </div>
+      <p class="game-message" id="gameMessage" role="status">Every fern counts. You can do this!</p>
+      <p class="journal-progress" id="journalProgress" aria-live="polite">Fossils discovered: 0 of 6</p>
+    </section>
+    <!-- The journal content is dynamically generated from the dinosaur data in JavaScript. -->
+    <dialog id="journalDialog" class="journal-dialog" aria-labelledby="journalTitle">
+      <div class="journal-heading">
+        <div>
+          <p class="eyebrow">Pip's field notes</p>
+          <h2 id="journalTitle">🦴 Fossil Discovery Journal</h2>
+        </div>
+        <button id="closeJournal" class="secondary-button journal-close" type="button" aria-label="Close fossil journal">✕ Close</button>
+      </div>
+      <p class="journal-description">Answer dinosaur and nature questions correctly to uncover six fossils. Each discovery teaches you about a real prehistoric dinosaur. Discoveries stay saved in this browser between games.</p>
+      <p id="journalCount" class="journal-count" aria-live="polite">0 of 6 fossils discovered</p>
+      <div id="journalEntries" class="journal-grid"></div>
+      <div class="journal-footer">
+        <button id="clearJournal" class="secondary-button" type="button">Clear discoveries</button>
+      </div>
+    </dialog>
+    <section class="below-game">
+      <article class="info-card"><h2>Why this prototype?</h2><p>Fern &amp; Fossil is an educational collection-and-trivia game. It teaches basic facts about dinosaurs, fossils, and prehistoric ecosystems while players collect ferns, dodge hazards, unlock fossil journal entries, and track their scores. The aim is easy to understand and suitable for future expansion.</p></article>
+      <article class="info-card"><h2>Ideas for future updates</h2><p>The fossil discovery journal is now playable and saves progress! Future ideas include age-adjusted question sets, new biomes, more dinosaurs, collectible seeds, power-ups, levels, and a forest restoration progress map. The game keeps its settings and object types organized in JavaScript so these can be added later.</p></article>
+    </section>
+  </main>
+  <footer>Made for COP4813 · <a href="index.html">Return to homepage</a></footer>
+</body>
+</html>
